@@ -5,8 +5,8 @@ from utils       import mpii_data            as mpii_data
 from utils       import mpii_data            as Mpii
 # from utils       import coco_data            as coco_data
 from utils       import penn_action_data     as penn_action
-from utils       import ntid_data            as ntid_data
-from utils       import posetrack_data       as posetrack_data
+# from utils       import ntid_data            as ntid_data
+# from utils       import posetrack_data       as posetrack_data
 from utils       import bbc_data             as bbc_data
 import utils.Mytransforms as Mytransforms
 import torch.nn.functional as F
@@ -296,37 +296,37 @@ def getDataloader(dataset, train_dir, val_dir, test_dir, sigma, stride, workers,
 
         test_loader = None
 
-    elif dataset == 'NTID':
-        train_loader = torch.utils.data.DataLoader(
-                                            ntid_data.NTID(train_dir, sigma, "Train",
-                                            Mytransforms.Compose([Mytransforms.TestResized(368),
-                                            Mytransforms.RandomHorizontalFlip_NTID(),])),
-                                            batch_size  = batch_size, shuffle=True,
-                                            num_workers = workers, pin_memory=True)
+    # elif dataset == 'NTID':
+    #     train_loader = torch.utils.data.DataLoader(
+    #                                         ntid_data.NTID(train_dir, sigma, "Train",
+    #                                         Mytransforms.Compose([Mytransforms.TestResized(368),
+    #                                         Mytransforms.RandomHorizontalFlip_NTID(),])),
+    #                                         batch_size  = batch_size, shuffle=True,
+    #                                         num_workers = workers, pin_memory=True)
     
-        val_loader   = torch.utils.data.DataLoader(
-                                            ntid_data.NTID (val_dir, sigma, "Val",
-                                            Mytransforms.Compose([Mytransforms.TestResized(368),])),
-                                            batch_size  = 1, shuffle=True,
-                                            num_workers = 1, pin_memory=True)
+    #     val_loader   = torch.utils.data.DataLoader(
+    #                                         ntid_data.NTID (val_dir, sigma, "Val",
+    #                                         Mytransforms.Compose([Mytransforms.TestResized(368),])),
+    #                                         batch_size  = 1, shuffle=True,
+    #                                         num_workers = 1, pin_memory=True)
     
-        test_loader  = torch.utils.data.DataLoader(
-                                            ntid_data.NTID (test_dir, sigma, "Test",),
-                                            batch_size  = 1, shuffle=True,
-                                            num_workers = 1, pin_memory=True)
+    #     test_loader  = torch.utils.data.DataLoader(
+    #                                         ntid_data.NTID (test_dir, sigma, "Test",),
+    #                                         batch_size  = 1, shuffle=True,
+    #                                         num_workers = 1, pin_memory=True)
 
-    elif dataset == 'PoseTrack':
-        train_loader = torch.utils.data.DataLoader(
-                                            posetrack_data.PoseTrack_Data(True, train_dir, sigma, stride,
-                                            Mytransforms.Compose([Mytransforms.TestResized(368),])),
-                                            batch_size  = batch_size, shuffle=True,
-                                            num_workers = workers, pin_memory=True)
+    # elif dataset == 'PoseTrack':
+    #     train_loader = torch.utils.data.DataLoader(
+    #                                         posetrack_data.PoseTrack_Data(True, train_dir, sigma, stride,
+    #                                         Mytransforms.Compose([Mytransforms.TestResized(368),])),
+    #                                         batch_size  = batch_size, shuffle=True,
+    #                                         num_workers = workers, pin_memory=True)
     
-        val_loader   = torch.utils.data.DataLoader(
-                                            posetrack_data.PoseTrack_Data(False, val_dir, sigma, stride,
-                                            Mytransforms.Compose([Mytransforms.TestResized(368),])),
-                                            batch_size  = 1, shuffle=True,
-                                            num_workers = 1, pin_memory=True)
+    #     val_loader   = torch.utils.data.DataLoader(
+    #                                         posetrack_data.PoseTrack_Data(False, val_dir, sigma, stride,
+    #                                         Mytransforms.Compose([Mytransforms.TestResized(368),])),
+    #                                         batch_size  = 1, shuffle=True,
+    #                                         num_workers = 1, pin_memory=True)
 
     elif dataset == "BBC":
         train_loader = torch.utils.data.DataLoader(

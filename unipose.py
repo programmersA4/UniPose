@@ -58,7 +58,7 @@ class Trainer(object):
         if self.dataset   ==  "LSP":
             self.numClasses  = 14
         elif self.dataset == "MPII":
-            self.numClasses  = 16
+            self.numClasses  = 410 
 
         self.train_loader, self.val_loader = getDataloader(self.dataset, self.train_dir,\
             self.val_dir, self.sigma, self.stride, self.workers, self.batch_size)
@@ -93,9 +93,9 @@ class Trainer(object):
         self.bestPCK  = 0
         self.bestPCKh = 0
 
-    # Print model summary and metrics
-    dump_input = torch.rand((1, 3, 368, 368]))
-    print(get_model_summary(self.modelmodel, dump_input))
+    # # Print model summary and metrics
+    # dump_input = torch.rand((1, 3, 368, 368))
+    # print(get_model_summary(self.modelmodel, dump_input))
 
     def training(self, epoch):
         train_loss = 0.0
