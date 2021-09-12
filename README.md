@@ -5,8 +5,9 @@
 
 <p align="justify">
   <strong>HMM 습관 인증 Pre-Trained weights</strong>
-  <a href="https://github.com/programmersA4/UniPose/releases/download/untagged-2c4801087914c0fabc7a/UniPose_COCO.pth">here</a>
-</p><br />
+  <a href="https://github.com/programmersA4/UniPose/releases/">페이지</a>
+  <a href="https://github.com/programmersA4/UniPose/releases/download/untagged-2c4801087914c0fabc7a/UniPose_COCO.pth">다운로드 링크</a>
+</p><br/>
 
 
 <p align="center">
