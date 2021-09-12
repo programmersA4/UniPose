@@ -47,6 +47,10 @@ Datasets used in this paper and required for training, validation, and testing c
 The pre-trained weights can be downloaded
   <a href="https://drive.google.com/drive/folders/1dPc7AayY2Pi3gjUURgozkuvlab5Vr-9n?usp=sharing">here</a>.
 </p><br />
+<p align="justify">
+  <strong>HMM 습관 인증 Pre-Trained weights</strong>
+  <a href="https://github.com/programmersA4/UniPose/releases/download/untagged-2c4801087914c0fabc7a/UniPose_COCO.pth">here</a>
+</p><br />
 
 
 **NEW!: OmniPose: A Multi-Scale Framework for Multi-Person Pose Estimation**
