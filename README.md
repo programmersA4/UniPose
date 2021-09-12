@@ -3,6 +3,12 @@
   <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Artacho_UniPose_Unified_Human_Pose_Estimation_in_Single_Images_and_Videos_CVPR_2020_paper.html">**UniPose: Unified Human Pose Estimation in Single Images and Videos**</a>.
 </p><br />
 
+<p align="justify">
+  <strong>HMM 습관 인증 Pre-Trained weights</strong>
+  <a href="https://github.com/programmersA4/UniPose/releases/download/untagged-2c4801087914c0fabc7a/UniPose_COCO.pth">here</a>
+</p><br />
+
+
 <p align="center">
   <img src="https://people.rit.edu/bm3768/images/Unipose_pipeline.png" title="WASPnet architecture for Semantic Segmentation">
   Figure 1: UniPose architecture for single frame pose detection. The input color image of dimensions (HxW) is fed through the ResNet backbone and WASP module to obtain 256 feature channels at reduced resolution by a factor of 8. The decoder module generates K heatmaps, one per joint, at the original resolution, and the locations of the joints are determined by a local max operation.
@@ -46,10 +52,6 @@ Datasets used in this paper and required for training, validation, and testing c
 <p align="justify">
 The pre-trained weights can be downloaded
   <a href="https://drive.google.com/drive/folders/1dPc7AayY2Pi3gjUURgozkuvlab5Vr-9n?usp=sharing">here</a>.
-</p><br />
-<p align="justify">
-  <strong>HMM 습관 인증 Pre-Trained weights</strong>
-  <a href="https://github.com/programmersA4/UniPose/releases/download/untagged-2c4801087914c0fabc7a/UniPose_COCO.pth">here</a>
 </p><br />
 
 
